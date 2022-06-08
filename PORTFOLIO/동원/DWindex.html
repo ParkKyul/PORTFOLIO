@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DW.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>동원산업 리디자인</title>
+    <script>
+        $(function(){
+            setInterval(function(){
+                $("#slider img:last").fadeOut(2000,function(){
+                    $("#slider img:last").prependTo("#slider");
+                    $("#slider img:last").show();
+                });
+            },5000);
+
+            //for(let i = 0; i > 6; i++){
+            //    if($("#slider img").eq(i).show(function(){
+           //        $("#paraNav ul li").eq(i).addClass("active")
+            //    }));
+            //}; 
+            
+                
+            $("#menu article").mouseenter(function(){
+                $("#menu article ol").slideDown();
+            });
+            $("#menu article").mouseleave(function(){
+                $("#menu article ol").slideUp();
+            });
+
+            //news//
+            setInterval(function(){
+                $("#newsslider ul").animate({marginTop:"-30"},function(){
+                    $("#newsslider ul li:first").appendTo("#newsslider ul");
+                    $("#newsslider ul").css({marginTop:0});
+                });
+            },2000);
+        });
+    </script>
+</head>
+<body>
+        
+    <main id="main01">
+        <h1><a href="#"><img id="logo" src="image/Logo_fff.png"></a></h1>
+        <section id="slider">
+                <a href="#"><img src="image/slide01.jpg "></a>
+                <a href="#"><img src="image/slide02.jpg "></a>
+                <a href="#"><img src="image/slide03.jpg "></a>
+                <a href="#"><img src="image/slide04.jpg "></a>
+                <a href="#"><img src="image/slide05.jpg "></a>
+                <a href="#"><img src="image/slide06.jpg "></a>
+                <nav class="paraNav">
+                    <ul>
+                        <li class="active"><a href="#section1">s1</a></li>
+                        <li><a href="#section2">s2</a></li>
+                        <li><a href="#section3">s3</a></li>
+                        <li><a href="#section4">s4</a></li>
+                        <li><a href="#section5">s5</a></li>
+                        <li><a href="#section6">s6</a></li>
+                        
+                    </ul>
+                </nav>
+        </section>
+        <section id="menu">
+            <article>
+                <h3>ESG</h3>
+                <ol>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">환경</a></li>
+                    <li><a href="#">사회</a></li>
+                    <li><a href="#">지배구조</a></li>
+                    <li><a href="#">이니셔티브</a></li>
+                </ol>
+            </article>
+            <article>
+                <h3>수산</h3>
+                <ol>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">수산사업</a></li>
+                    <li><a href="#">항만사업</a></li>
+                    <li><a href="#">수산소식</a></li>
+                    <li><a href="#">사업장소개</a></li>
+                </ol>
+            </article>
+            <article>
+                <h3>유통</h3>
+                <ol>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">유통사업</a></li>
+                    <li><a href="#">제품정보</a></li>
+                    <li><a href="#">사업장소개</a></li>
+                </ol>
+            </article>
+            <article>
+                <h3>냉장물류</h3>
+                <ol>
+                    <li><a href="#">냉장물류</a></li>
+                    <li><a href="#">물류정보시스템</a></li>
+                    <li><a href="#">주요인증및수상내역</a></li>
+                    <li><a href="#">사업장소개</a></li>
+                </ol>
+            </article>
+            <article id="Ect">
+                <div>
+                    <a href="#">회사소개</a><span>|</span><a href="#">전자채용</a><br/>
+                    <a href="#">고객센터</a><span>|</span><a href="#">사이트맵</a>
+                </div>
+                
+            </article>
+
+        </section>
+    </main>
+    <main id="main02">
+        <section id="newsslider">
+            <h5>동원뉴스</h5>
+            <ul>
+                <li><a href="#">동원산업, 100만원 참치회 세트 ‘동원 북대서양 참다랑어 명품 세트’ 사전 예약 완판 | 2021.08.24</a></li>
+                <li><a href="#">안전재해통합TF 발대식 진행하고 ‘자율 안전경영’ 선포 | 2021.07.02</a></li>
+                <li><a href="#">해양 생태계 보전과 깨끗한 지역 사회 환경을 위한 ‘국제 해안 클린업 데이’ 행사 진행 | 2021.06.30</a></li>
+                <li><a href="#">이명우 동원산업 사장, 수산업계 지속 가능 경영 이끈다 | 2021.06.20</a></li>
+                <li><a href="#">동원그룹 계열사, 해양수산부문 지속가능발전목표 달성을 위한 챌린지 서약 서명 | 2021.03.30</a></li>
+                <li><a href="#">동원산업, ESG경영으로 지속가능 수산업 선도 | 2021.02.26</a></li>
+            </ul>
+        </section>
+        <section id="product1">
+            <div class="product1_box">
+                <dd>환경보호</dd>
+                <dt>전 세계 바다에서의 지속가능한 조업을 위해
+                    국제규정과 내부지침을 준수하며 미래의 바다 생태계 유지에 노력하고 있습니다.</dt>
+            </div>
+            <div class="product1_box">
+                <dd>환경보호</dd>
+                <dt>전 세계 바다에서의 지속가능한 조업을 위해
+                    국제규정과 내부지침을 준수하며 미래의 바다 생태계 유지에 노력하고 있습니다.</dt>
+            </div>
+            <div class="product1_box">
+                <dd>환경보호</dd>
+                <dt>전 세계 바다에서의 지속가능한 조업을 위해
+                    국제규정과 내부지침을 준수하며 미래의 바다 생태계 유지에 노력하고 있습니다.</dt>
+            </div>
+            <div class="product1_box">
+                <dd>환경보호</dd>
+                <dt>전 세계 바다에서의 지속가능한 조업을 위해
+                    국제규정과 내부지침을 준수하며 미래의 바다 생태계 유지에 노력하고 있습니다.</dt>
+            </div>
+        </section>
+        <section id="product2">
+            <div class="product2_box">
+                <img src="image/storyT.jpg">
+                <div class="wrap">
+                    <div class="wrap_item">
+                        <img src="image/tuna1.jpg">
+                        <dd>동원참치 케이터링 서비스</dd>
+                        <dt>참치전문기업, 동원산업이 참치 케이터링 서비스로 찾아 뵙습니다.</dt>
+                        <button>자세히<span>></span></button>
+                    </div>
+                    
+                    <div class="wrap_item">
+                        <img src="image/tuna2.jpg">
+                        <dd>동원참치 아이스큐브</dd>
+                        <dt>편리미엄 세대를 위한 새로운 참치, 얼음형태의 참치를 다양한 용도로!</dt>
+                        <button>자세히<span>></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product2_box">
+                <img src="image/storyS.jpg">
+                <div class="wrap">
+                    <div class="wrap_item">
+                        <img src="image/salmon1.jpg">
+                        <dd>동원 훈제연어 오리지널</dd>
+                        <dt>칠레 프리미엄 등급 연어를 선별하여 전통방식 그대로 훈연한 동원 훈제연어 </dt>
+                        <button>자세히<span>></span></button>
+                    </div>
+                    <div class="wrap_item">
+                        <img src="image/salmon2.jpg">
+                        <a href="#"><dd>동원 훈제연어 프리미엄</dd></a>
+                        <a href="#"><dt>청정해역 노르웨이의 슈페리어 등급 연어를 엄선하여 준비한 신선한 훈제연어</dt></a>
+                        <button>자세히<span>></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="image/footer.jpg">
+        <div>
+            <ul class="_list">
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#"><span>|</span>법적고지</a></li>
+				<li><a href="#"><span>|</span>이메일무단수집금지</a></li>
+				<li><a href="#"><span>|</span>정도경영 신고센터</a></li>
+				<li><a href="#"><span>|</span>제휴문의</a></li>
+				<li><a href="#"><span>|</span>인재채용</a></li>
+				<li><a href="#"><span>|</span>오시는 길</a></li>
+				<li><a href="#"><span>|</span>사이트맵</a></li>
+				<li><a href="#"><span>|</span>English</a></li>
+			</ul>
+            <hr/>
+			<p>서울특별시 서초구 마방로 68 (서초구 양재동 275) 06775 동원산업㈜</p>
+			<p>COPYRIGHT ©2014 DONGWON INDUSTRIES. ALL RIGHTS RESERVED</p><!-- pc 전용 문구 -->
+        </div>
+			
+
+    </footer>
+</body>
+</html>
